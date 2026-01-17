@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Arahkan Google langsung ke peta situs Anda
+Sitemap: https://hamkahrahap01.github.io/game-penghasil-saldo-dana-2026/sitemap.xml
