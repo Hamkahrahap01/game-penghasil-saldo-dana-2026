@@ -213,9 +213,20 @@
         <p style="font-size: 0.7rem; color: #888; margin-top: 10px;">Disclaimer: Hasil bervariasi tergantung ketekunan setiap pengguna.</p>
     </div>
 </footer>
+<button id="scrollToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+        style="display: none; position: fixed; bottom: 20px; right: 20px; width: 50px; height: 50px; background: #118eea; color: white; border: none; border-radius: 50%; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; font-size: 24px;">
+    ↑
+</button>            
     <script>
         // Progress Bar Logic
         window.onscroll = function() {
+            // Logika menampilkan tombol Scroll to Top
+    const topBtn = document.getElementById("scrollToTop");
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
             var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
             var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
             var scrolled = (winScroll / height) * 100;
