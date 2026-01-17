@@ -19,24 +19,25 @@
 
         body {
             font-family: 'Poppins', sans-serif;
-            /* Diperbaiki: Line-height dirapatkan dari 1.8 menjadi 1.5 */
-            line-height: 1.5;
+            /* Merapatkan jarak antar baris kalimat agar lebih padat */
+            line-height: 1.4; 
             color: var(--dark-text);
             margin: 0;
             background-color: var(--light-bg);
         }
 
-        /* Diperbaiki: Merapatkan jarak antar paragraf agar tidak terlalu renggang */
+        /* Merapatkan jarak antar paragraf */
         p {
             margin-top: 0;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+            text-align: justify;
         }
 
         .container {
             width: 90%;
             max-width: 1100px;
             margin: 0 auto;
-            padding: 20px;
+            padding: 15px; /* Sedikit dirapatkan */
         }
 
         /* Hero Section */
@@ -47,13 +48,13 @@
             background-position: center;
             color: white;
             text-align: center;
-            padding: 100px 20px;
+            padding: 80px 20px; /* Padding dikurangi agar lebih compact */
         }
 
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 15px; /* Jarak dirapatkan */
-            line-height: 1.2;    /* Jarak baris judul dirapatkan */
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            line-height: 1.2;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
@@ -62,7 +63,7 @@
             height: auto;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin: 20px 0; /* Jarak gambar dirapatkan */
+            margin: 20px 0;
             border: 4px solid white;
         }
 
@@ -70,14 +71,14 @@
         .cta-container {
             display: flex;
             justify-content: center;
-            gap: 15px; /* Jarak antar tombol dirapatkan */
+            gap: 12px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .btn {
-            padding: 15px 30px; /* Padding dirapatkan sedikit */
-            font-size: 1.1rem;
+            padding: 14px 28px;
+            font-size: 1rem;
             font-weight: 700;
             text-decoration: none;
             border-radius: 50px;
@@ -86,60 +87,52 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
 
-        .btn-daftar {
-            background-color: var(--dana-blue);
-            color: white;
-        }
-
-        .btn-bonus {
-            background-color: var(--accent-orange);
-            color: white;
-        }
+        .btn-daftar { background-color: var(--dana-blue); color: white; }
+        .btn-bonus { background-color: var(--accent-orange); color: white; }
 
         .btn:hover {
-            transform: translateY(-3px);
+            transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.3);
         }
 
-        /* Konten Mendalam (Long-form) */
+        /* Konten Utama */
         .main-content {
             background: white;
-            padding: 40px 0; /* Padding atas bawah dirapatkan */
-            border-radius: 30px 30px 0 0;
-            margin-top: -40px;
+            padding: 30px 0;
+            border-radius: 25px 25px 0 0;
+            margin-top: -30px;
             position: relative;
         }
 
-        /* Diperbaiki: Merapatkan jarak judul artikel */
         .section-title {
             text-align: center;
             color: var(--dana-blue);
             margin-top: 0;
-            margin-bottom: 20px;
+            margin-bottom: 15px; /* Merapatkan judul ke teks di bawahnya */
+            font-size: 1.6rem;
         }
 
         .article-body {
-            font-size: 1.05rem;
-            text-align: justify;
+            font-size: 1rem;
         }
 
-        /* Diperbaiki: Merapatkan judul h2 di dalam artikel */
         .article-body h2 {
-            margin-top: 25px;
-            margin-bottom: 10px;
-            line-height: 1.3;
+            margin-top: 20px;
+            margin-bottom: 8px;
+            color: var(--dana-blue);
+            font-size: 1.4rem;
         }
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 15px; /* Gap grid dirapatkan */
-            margin-top: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 15px;
+            margin-top: 25px;
         }
 
         .feature-card {
             background: #fff;
-            padding: 20px; /* Padding kartu dirapatkan */
+            padding: 18px;
             border-left: 5px solid var(--dana-blue);
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             border-radius: 10px;
@@ -147,22 +140,23 @@
 
         .feature-card h3 {
             margin-top: 0;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
         }
 
         footer {
             background: #222;
             color: #ccc;
             text-align: center;
-            padding: 30px 0; /* Padding footer dirapatkan */
+            padding: 30px 0;
             margin-top: 40px;
         }
 
         /* Responsif Mobile */
         @media (max-width: 768px) {
-            header h1 { font-size: 1.8rem; }
-            .btn { width: 100%; text-align: center; margin-bottom: 10px; }
-            .cta-container { gap: 0; }
+            header h1 { font-size: 1.6rem; }
+            .btn { width: 100%; text-align: center; padding: 12px; }
+            .cta-container { gap: 10px; }
         }
     </style>
 </head>
@@ -171,7 +165,7 @@
     <header>
         <div class="container">
             <h1>Game Penghasil Saldo DANA Tercepat 2026:<br>Solusi Hiburan Digital Cerdas</h1>
-            <p>Dapatkan Penghasilan Tambahan Secara Instan Hanya dari Genggaman Tangan Anda!</p>
+            <p>Dapatkan Penghasilan Tambahan Secara Instan Hari Ini!</p>
             
             <img src="https://res.cloudinary.com/dp49mzzrt/image/upload/v1768630759/saldo_dana_populer_nhdecq.jpg" alt="Game Penghasil Saldo DANA Tercepat 2026" class="hero-img">
 
@@ -190,33 +184,33 @@
                     Memasuki tahun 2026, ekosistem ekonomi digital di Indonesia mengalami transformasi besar. Kini, mencari hiburan bukan lagi sekadar menghabiskan waktu, melainkan menjadi cara cerdas untuk mendapatkan keuntungan finansial. <strong>Game penghasil saldo DANA tercepat 2026</strong> hadir sebagai jawaban bagi masyarakat yang menginginkan platform hiburan yang transparan, cepat dalam pembayaran, dan tanpa memerlukan modal besar.
                 </p>
                 <p>
-                    Berbeda dengan tahun-tahun sebelumnya, sistem keamanan dan kecepatan transaksi di tahun 2026 kini jauh lebih terintegrasi. Dengan teknologi API terbaru, poin yang Anda kumpulkan setelah memenangkan permainan dapat langsung dikonversi menjadi saldo digital secara <em>real-time</em>. Hal inilah yang menjadikan tren "Cuan dari Game" semakin diminati oleh berbagai kalangan, mulai dari milenial hingga profesional.
+                    Sistem keamanan dan kecepatan transaksi di tahun 2026 kini jauh lebih terintegrasi. Dengan teknologi API terbaru, poin yang Anda kumpulkan dapat langsung dikonversi menjadi saldo digital secara <em>real-time</em>. Hal inilah yang menjadikan tren "Cuan dari Game" semakin diminati oleh berbagai kalangan di Indonesia.
                 </p>
 
                 <div class="feature-grid">
                     <div class="feature-card">
                         <h3>⚡ Penarikan Instan</h3>
-                        <p>Tidak perlu menunggu berhari-hari. Sistem kami mendukung penarikan otomatis langsung ke akun DANA Anda dalam hitungan detik setelah misi selesai.</p>
+                        <p>Sistem kami mendukung penarikan otomatis langsung ke akun DANA Anda dalam hitungan detik setelah misi selesai.</p>
                     </div>
                     <div class="feature-card">
                         <h3>🛡️ Keamanan Terjamin</h3>
-                        <p>Menggunakan sistem enkripsi terbaru tahun 2026, memastikan data pribadi dan riwayat transaksi Anda terlindungi sepenuhnya dari pihak ketiga.</p>
+                        <p>Menggunakan enkripsi terbaru tahun 2026, memastikan data pribadi dan riwayat transaksi Anda terlindungi sepenuhnya.</p>
                     </div>
                     <div class="feature-card">
                         <h3>🎮 Game Variatif</h3>
-                        <p>Mulai dari puzzle yang mengasah otak hingga game petualangan yang seru, semua dirancang untuk memberikan kepuasan bermain sambil menghasilkan.</p>
+                        <p>Mulai dari puzzle hingga petualangan seru, semua dirancang untuk memberikan kepuasan bermain sambil menghasilkan.</p>
                     </div>
                 </div>
 
-                <h2 style="color: var(--dana-blue);">Panduan Memulai Hiburan Digital Cerdas</h2>
+                <h2>Panduan Memulai Hiburan Digital Cerdas</h2>
                 <p>
-                    Untuk memaksimalkan pendapatan Anda, sangat disarankan untuk melakukan <strong>Pendaftaran Akun</strong> secara resmi melalui link yang tersedia. Setelah mendaftar, pastikan Anda segera melakukan <strong>Klaim Bonus</strong> awal untuk mendapatkan modal tambahan guna membuka fitur-fitur premium yang memiliki <em>payout</em> lebih tinggi.
+                    Untuk memaksimalkan pendapatan, sangat disarankan untuk melakukan <strong>Pendaftaran Akun</strong> secara resmi melalui link yang tersedia. Setelah mendaftar, segera lakukan <strong>Klaim Bonus</strong> awal untuk mendapatkan modal tambahan guna membuka fitur dengan <em>payout</em> lebih tinggi.
                 </p>
                 <p>
-                    Strategi terbaik di tahun 2026 adalah dengan konsisten menyelesaikan misi harian. Semakin rutin Anda berinteraksi dengan aplikasi, semakin besar algoritma memberikan peluang hadiah besar kepada akun Anda. Jangan lewatkan kesempatan emas ini untuk menjadi bagian dari komunitas digital yang cerdas dan produktif.
+                    Strategi terbaik adalah konsisten menyelesaikan misi harian. Semakin rutin Anda berinteraksi, semakin besar peluang hadiah besar yang diberikan algoritma kepada akun Anda. Jangan lewatkan kesempatan emas ini.
                 </p>
                 
-                <div class="cta-container" style="margin-top: 30px;">
+                <div class="cta-container" style="margin-top: 25px;">
                     <a href="https://otieu.com/4/10374339" class="btn btn-daftar">Daftar Akun Sekarang</a>
                 </div>
             </section>
@@ -224,15 +218,15 @@
     </main>
 
     <footer>
-    <div class="container">
-        <p><strong>Cuan Digital 2026</strong> - Navigasi Cerdas Hiburan Berbayar.</p>
-        <p>
-            <a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 0.9rem;">Kebijakan Privasi</a> | 
-            <a href="#" style="color: #ccc; text-decoration: none; font-size: 0.9rem;">Syarat & Ketentuan</a>
-        </p>
-        <p style="font-size: 0.8rem; margin-top: 10px;">Disclaimer: Hasil yang didapatkan setiap pengguna mungkin berbeda tergantung pada tingkat aktivitas dan strategi bermain.</p>
-    </div>
-</footer>
+        <div class="container">
+            <p><strong>Cuan Digital 2026</strong> - Navigasi Cerdas Hiburan Berbayar.</p>
+            <p>
+                <a href="privacy.html" style="color: #ccc; text-decoration: none; font-size: 0.9rem;">Kebijakan Privasi</a> | 
+                <a href="#" style="color: #ccc; text-decoration: none; font-size: 0.9rem;">Syarat & Ketentuan</a>
+            </p>
+            <p style="font-size: 0.8rem; margin-top: 10px;">Disclaimer: Hasil dapat berbeda tergantung aktivitas pengguna.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
