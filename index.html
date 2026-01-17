@@ -19,14 +19,17 @@
 
         body {
             font-family: 'Poppins', sans-serif;
+            /* Diperbaiki: Line-height dirapatkan dari 1.8 menjadi 1.5 */
             line-height: 1.5;
             color: var(--dark-text);
             margin: 0;
             background-color: var(--light-bg);
-            p {
-    margin-bottom: 8px; /* Mengurangi jarak bawah antar paragraf */
-    margin-top: 0;      /* Menghilangkan jarak atas tambahan */
-}
+        }
+
+        /* Diperbaiki: Merapatkan jarak antar paragraf agar tidak terlalu renggang */
+        p {
+            margin-top: 0;
+            margin-bottom: 12px;
         }
 
         .container {
@@ -49,20 +52,17 @@
 
         header h1 {
             font-size: 2.5rem;
-            margin-bottom: 20px;
-            line-height: 1.3;
+            margin-bottom: 15px; /* Jarak dirapatkan */
+            line-height: 1.2;    /* Jarak baris judul dirapatkan */
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
-.article-body h2 {
-    margin-bottom: 10px; /* Merapatkan judul dengan teks di bawahnya */
-    margin-top: 20px;
-}
+
         .hero-img {
             max-width: 100%;
             height: auto;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin: 30px 0;
+            margin: 20px 0; /* Jarak gambar dirapatkan */
             border: 4px solid white;
         }
 
@@ -70,13 +70,13 @@
         .cta-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 15px; /* Jarak antar tombol dirapatkan */
             flex-wrap: wrap;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
         .btn {
-            padding: 18px 35px;
+            padding: 15px 30px; /* Padding dirapatkan sedikit */
             font-size: 1.1rem;
             font-weight: 700;
             text-decoration: none;
@@ -104,50 +104,65 @@
         /* Konten Mendalam (Long-form) */
         .main-content {
             background: white;
-            padding: 50px 0;
-            border-radius: 30px -30px 0 0;
-            margin-top: -50px;
+            padding: 40px 0; /* Padding atas bawah dirapatkan */
+            border-radius: 30px 30px 0 0;
+            margin-top: -40px;
             position: relative;
         }
 
+        /* Diperbaiki: Merapatkan jarak judul artikel */
         .section-title {
             text-align: center;
             color: var(--dana-blue);
-            margin-bottom: 40px;
+            margin-top: 0;
+            margin-bottom: 20px;
         }
 
         .article-body {
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             text-align: justify;
+        }
+
+        /* Diperbaiki: Merapatkan judul h2 di dalam artikel */
+        .article-body h2 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+            line-height: 1.3;
         }
 
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin-top: 40px;
+            gap: 15px; /* Gap grid dirapatkan */
+            margin-top: 30px;
         }
 
         .feature-card {
             background: #fff;
-            padding: 25px;
+            padding: 20px; /* Padding kartu dirapatkan */
             border-left: 5px solid var(--dana-blue);
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             border-radius: 10px;
+        }
+
+        .feature-card h3 {
+            margin-top: 0;
+            margin-bottom: 8px;
         }
 
         footer {
             background: #222;
             color: #ccc;
             text-align: center;
-            padding: 40px 0;
-            margin-top: 50px;
+            padding: 30px 0; /* Padding footer dirapatkan */
+            margin-top: 40px;
         }
 
         /* Responsif Mobile */
         @media (max-width: 768px) {
             header h1 { font-size: 1.8rem; }
-            .btn { width: 100%; text-align: center; }
+            .btn { width: 100%; text-align: center; margin-bottom: 10px; }
+            .cta-container { gap: 0; }
         }
     </style>
 </head>
@@ -193,7 +208,7 @@
                     </div>
                 </div>
 
-                <h2 style="margin-top: 50px; color: var(--dana-blue);">Panduan Memulai Hiburan Digital Cerdas</h2>
+                <h2 style="color: var(--dana-blue);">Panduan Memulai Hiburan Digital Cerdas</h2>
                 <p>
                     Untuk memaksimalkan pendapatan Anda, sangat disarankan untuk melakukan <strong>Pendaftaran Akun</strong> secara resmi melalui link yang tersedia. Setelah mendaftar, pastikan Anda segera melakukan <strong>Klaim Bonus</strong> awal untuk mendapatkan modal tambahan guna membuka fitur-fitur premium yang memiliki <em>payout</em> lebih tinggi.
                 </p>
@@ -201,7 +216,7 @@
                     Strategi terbaik di tahun 2026 adalah dengan konsisten menyelesaikan misi harian. Semakin rutin Anda berinteraksi dengan aplikasi, semakin besar algoritma memberikan peluang hadiah besar kepada akun Anda. Jangan lewatkan kesempatan emas ini untuk menjadi bagian dari komunitas digital yang cerdas dan produktif.
                 </p>
                 
-                <div class="cta-container" style="margin-top: 40px;">
+                <div class="cta-container" style="margin-top: 30px;">
                     <a href="https://otieu.com/4/10374339" class="btn btn-daftar">Daftar Akun Sekarang</a>
                 </div>
             </section>
