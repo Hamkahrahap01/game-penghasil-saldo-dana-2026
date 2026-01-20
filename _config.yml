@@ -1,0 +1,14 @@
+title: Game Penghasil Saldo DANA 2026
+description: Panduan aplikasi dan game penghasil uang tercepat dan terpercaya.
+url: "https://hamkahrahap01.github.io"
+baseurl: "/game-penghasil-saldo-dana-2026"
+
+# Pengaturan SEO & Permalinks
+permalink: /:title.html
+markdown: kramdown
+highlighter: rouge
+
+# Plugin Otomatis (Opsional untuk masa depan)
+plugins:
+  - jekyll-sitemap
+  - jekyll-feed
