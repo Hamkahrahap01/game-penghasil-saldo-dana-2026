@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.4; margin: 0; padding: 15px; background-color: #fff; color: #333; }
+        .header-status { text-align: center; color: #2e7d32; font-weight: bold; font-size: 14px; margin-bottom: 5px; }
+        .rating { color: #ff9800; font-size: 14px; }
+        .breadcrumbs { font-size: 14px; margin: 10px 0 20px 0; color: #666; text-align: left; }
+        .breadcrumbs a { color: #2196f3; text-decoration: none; font-weight: bold; }
+        h1 { font-size: 24px; text-align: center; margin: 10px 0; line-height: 1.2; color: #222; }
+        .main-img { width: 100%; border-radius: 15px; margin: 10px 0; }
+        .btn-group { display: flex; gap: 10px; margin: 20px 0; }
+        .btn-daftar { background-color: #ffca28; color: #000; flex: 1; padding: 15px; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; }
+        .btn-klaim { background-color: #4caf50; color: #fff; flex: 1; padding: 15px; text-align: center; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; }
+        .content-text { font-size: 16px; text-align: left; margin-top: 20px; }
+        .baca-juga { background: #f1f8e9; border-left: 5px solid #4caf50; padding: 15px; margin: 20px 0; border-radius: 5px; }
+        .baca-juga a { color: #2e7d32; text-decoration: none; font-weight: bold; }
+        .footer { text-align: center; margin-top: 40px; font-size: 12px; color: #777; border-top: 1px solid #eee; padding-top: 15px; }
+    </style>
+</head>
+<body>
+    <div class="header-status">✔ SITUS RESMI TERVERIFIKASI <span class="rating">★ 4.9 Rating</span></div>
+    
+    <div class="breadcrumbs">
+        <a href="{{ site.baseurl }}/index.html">⬅ Beranda</a> > <span>{{ page.category }}</span> > {{ page.short_title }}
+    </div>
+
+    <h1>{{ page.title }}</h1>
+
+    <img src="{{ page.image_url }}" alt="{{ page.short_title }}" class="main-img">
+
+    <div class="btn-group">
+        <a href="{{ page.button_url }}" class="btn-daftar">DAFTAR AKUN</a>
+        <a href="{{ page.button_url }}" class="btn-klaim">KLAIM BONUS</a>
+    </div>
+
+    <div class="content-text">
+        {{ content }}
+    </div>
+
+    <div class="footer">&copy; 2026 Game Penghasil Saldo DANA - Hamkahrahap01.</div>
+</body>
+</html>
